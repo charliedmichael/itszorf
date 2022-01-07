@@ -1,5 +1,5 @@
 import './style.css';
-import zorfLetters from './images/ZORF-letters-1.png';
+import zorfLetters from './images/ZORF-letters-4.png';
 
 
 var nav = document.querySelector('#nav-content');
