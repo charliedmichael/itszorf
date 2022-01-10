@@ -1,3 +1,7 @@
+:root {
+  --navHeight: 0px;
+}
+
 @font-face {
   font-family: "modem";
   src: url('./Modem-Regular.ttf') format('truetype');
@@ -8,8 +12,8 @@ body {
   background-color: rgb(20, 20, 20);
   color: white;
   font-weight: 100;
-  font-size: 15px;
-  line-height: 110%;
+  font-size: calc(0.45vw + 9px);
+  line-height: 120%;
 
   margin: 10px;
 
@@ -21,6 +25,13 @@ a {
 
 img {
   max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+
+}
+
+.textSize {
+  max-height: calc(0.45vw + 9px);
 
 }
 
@@ -40,13 +51,8 @@ video {
 .wavy {
   text-decoration-line: underline;
   text-decoration-style: wavy;
-  text-decoration-thickness: 5%;
-  text-underline-offset: 3px;
-
-}
-
-.logo {
-  max-width: 120px;
+  text-decoration-thickness: 0.5%;
+  text-underline-offset: 0px;
 
 }
 
@@ -59,12 +65,47 @@ video {
   background: white;
   font-weight: 400;
 
-  border: 1px solid white;
+  border: 0px solid white;
   color: rgb(20, 20, 20);
   white-space: nowrap;
 
   margin-bottom: 2px;
+  padding-top: 1px;
 
+}
+
+.link {
+  background: white;
+  margin-left: 5px;
+}
+
+.link:hover {
+  background: linear-gradient(90deg, white 0%, white 33%, black 50%,  white 66%, white 100%);
+  background-size: 400% 400%;
+
+  animation: gradient 2s linear infinite;
+
+}
+
+/* @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+} */
+@keyframes gradient {
+	from {
+		background-position: 100% 50%;
+	}
+	to {
+		background-position: 0% 50%;
+	}
+	
 }
 
 .textRight {
@@ -76,6 +117,11 @@ video {
   justify-content: space-between;
 }
 
+.alignTop {
+  display: flex;
+  align-items: flex-start;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -84,13 +130,17 @@ video {
   top: 0px;
   width: calc( 100vw - 20px );
 
+  height: calc( 4.5vw + 10px);
+  /* min-height: 100px; */
+
   padding-top: 10px;
-  padding-bottom: 10px;
 
   background:rgb(20, 20, 20);
 }
 
 .intro {
+  padding-top: 7.25vw;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
   grid-template-rows: auto;
@@ -98,11 +148,11 @@ video {
   column-gap: 10px;
   row-gap: 10px;
 
-  margin-bottom: 10px;
-  margin-top: 10px;
 }
 
 .nftGrid {
+  padding-top: 7.25vw;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   grid-template-rows: auto;
@@ -110,18 +160,14 @@ video {
   column-gap: 10px;
   row-gap: 10px;
 
-  padding-top: 10px;
-
-}
-
-.pageGap {
-  height: 5vw;
 }
 
 .stats {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 10px;
+  row-gap: 10px;
+
   grid-template-rows: auto auto 1fr;
   height: auto;
 
@@ -130,5 +176,5 @@ video {
 .span3 {
   grid-column-start: 1;
   grid-column-end: span 3;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
