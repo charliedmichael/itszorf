@@ -61,6 +61,21 @@ module.exports = {
       template: './src/road-map.html',
       filename: 'road-map.html',
     }),
+    new HtmlWebpackPlugin({
+      title: 'guerilla gorilla',
+      template: './src/guerilla-gorilla.html',
+      filename: 'guerilla-gorilla.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'earth buddies',
+      template: './src/earth-buddies.html',
+      filename: 'earth-buddies.html',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'mr. acid',
+      template: './src/mr-acid.html',
+      filename: 'mr-acid.html',
+    }),
   ],
   output: {
     filename: '[name].bundle.js', // '[name].bundle.js',

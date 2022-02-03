@@ -72,6 +72,22 @@ video {
   margin-bottom: 2px;
   padding-top: 1px;
 
+
+}
+
+.header {
+
+  display: flex;
+  align-items: flex-start;
+  vertical-align: super;
+  font-size: calc(1vw + 25px);
+  background: white;
+
+  line-height: calc(1vw + 25px);
+  height: calc(1vw + 25px);
+
+  letter-spacing: -2px;
+
 }
 
 .link {
@@ -130,16 +146,18 @@ video {
   top: 0px;
   width: calc( 100vw - 20px );
 
-  height: calc( 4.5vw + 10px);
+  height: calc( 6vw + 10px );
   /* min-height: 100px; */
+  max-height: 70px;
 
   padding-top: 10px;
+  padding-bottom: 5px;
 
   background:rgb(20, 20, 20);
 }
 
 .intro {
-  padding-top: 7.25vw;
+  padding-top: 9vw;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
@@ -151,7 +169,7 @@ video {
 }
 
 .nftGrid {
-  padding-top: 7.25vw;
+  padding-top: 3.25vw;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -163,6 +181,7 @@ video {
 }
 
 .stats {
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 10px;
